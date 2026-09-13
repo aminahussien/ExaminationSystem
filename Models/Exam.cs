@@ -7,15 +7,16 @@ namespace ExaminationSystem.Models
         public int Time {  get; set; }
         public static int NumberOfQuestions { get; set; }
 
-        public List<Question> Questions { get; set; }= new List<Question>();    
+        public List<Question> Questions { get; set; }
 
         public Subject SubjectName { get; set; }
 
         protected readonly Stopwatch stopwatch = new Stopwatch();   
 
-        protected Exam(int time , int numOfQestions) {
+        protected Exam(int time , int numOfQestions , List<Question> questions) {
             Time = time;
-            Questions = new List<Question>();
+            NumberOfQuestions = numOfQestions;
+            Questions = questions;
         }    
         //show exam functionality 
         public abstract void ShowTheExam();

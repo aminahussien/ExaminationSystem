@@ -2,13 +2,18 @@
 {
     public class McqQuestion : Question
     {
-        public McqQuestion(string header, string body, decimal mark) : base(header, body, mark)
+        public McqQuestion(string header, string body, decimal mark, List<Answer> answers) : base(header, body, mark)
         {
+            AnswerList = answers;
         }
 
-        protected override void CreateQuestion()
+        public override void CreateQuestion()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(ToString());
+            foreach (var ans in AnswerList)
+            {
+                Console.WriteLine(ans);
+            }
         }
     }
 }

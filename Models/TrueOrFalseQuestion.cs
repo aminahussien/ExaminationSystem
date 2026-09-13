@@ -4,11 +4,20 @@
     {
         public TrueOrFalseQuestion(string header, string body, decimal mark) : base(header, body, mark)
         {
+            AnswerList = new List<Answer>
+            {
+                new Answer(1, "True"),
+                new Answer(2, "False")
+            };
         }
 
-        protected override void CreateQuestion()
+        public override void CreateQuestion()
         {
-            throw new NotImplementedException();
+            Console.WriteLine(ToString());
+            foreach (var ans in AnswerList)
+            {
+                Console.WriteLine(ans);
+            }
         }
     }
 }
