@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using ExaminationSystem.Contracts;
 namespace ExaminationSystem.Models
 {
     public class PracticalExam : Exam
     {
+        public McqQuestion McqQuestion { get; set; }
+
+        public override void ShowTheExam()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

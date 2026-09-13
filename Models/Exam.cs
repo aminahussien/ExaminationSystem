@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ExaminationSystem.Models
+﻿namespace ExaminationSystem.Models
 {
-    public class Exam
+    public abstract class Exam
     {
         public TimeOnly Time {  get; set; }
-        public int NumberOfQuestions { get; set; }
+        public static int NumberOfQuestions { get; set; }
+
+        public Question[] ExamQuestions = new Question[NumberOfQuestions];
 
         public Subject SubjectName { get; set; }
 
         //show exam functionality 
-        public void virtual MakeAnExam()
-        {
-
-        }
+        public abstract void ShowTheExam();
+        
     }
 }

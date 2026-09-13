@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ExaminationSystem.Models
+﻿namespace ExaminationSystem.Models
 {
     public class Subject
     {
@@ -15,5 +8,9 @@ namespace ExaminationSystem.Models
         public Exam ExamOfTheSubject { get; set; }
 
         //implement the functionality to create an exam 
+        public void CreateAnExam()
+        {
+
+        }
     }
 }

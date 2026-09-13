@@ -1,6 +1,4 @@
-﻿
-
-namespace ExaminationSystem.Models
+﻿namespace ExaminationSystem.Models
 {
     public class Question
     {
@@ -14,8 +12,8 @@ namespace ExaminationSystem.Models
         public string Header { get; set ; }
         public string Body { get; set; }
         public decimal Mark { get; set; }
-
         public Answer[] AnswerList { get; set; }
+        public Answer RightAnswer { get; set; }
 
 
     }
