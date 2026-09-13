@@ -1,6 +1,6 @@
 ﻿namespace ExaminationSystem.Models
 {
-    public class Question
+    public abstract class Question
     {
         public Question(string header, string body, decimal mark)
         {
@@ -14,6 +14,8 @@
         public decimal Mark { get; set; }
         public Answer[] AnswerList { get; set; }
         public Answer RightAnswer { get; set; }
+
+        protected abstract void CreateQuestion();
 
 
     }

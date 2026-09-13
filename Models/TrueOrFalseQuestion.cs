@@ -5,5 +5,10 @@
         public TrueOrFalseQuestion(string header, string body, decimal mark) : base(header, body, mark)
         {
         }
+
+        protected override void CreateQuestion()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
